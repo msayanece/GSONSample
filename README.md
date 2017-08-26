@@ -48,7 +48,7 @@ Sayan Mukherjee - Android Developer See also the list of contributors who partic
 
 ## License
 
-This project is free and open source to use in any project if you want. See for more information in licence.md file in this repository
+This project is free and open source to use in any project if you want. This project licence also includes Google GSON ![Licence](https://github.com/google/gson#license). See for more information in licence.md file in this repository.
 
 
 ## Acknowledgments
