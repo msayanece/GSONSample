@@ -1,5 +1,7 @@
 package sayan.example.com.gsonsample.pojos;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,6 +23,12 @@ public class UserDetails {
     @SerializedName("age")
     @Expose
     private Integer age;
+    @SerializedName("address")
+    @Expose
+    private JsonObject address;
+    @SerializedName("phoneNumbers")
+    @Expose
+    private JsonArray phoneNumbers = null;
 
     /**
      * No args constructor for use in serialization
@@ -34,13 +42,17 @@ public class UserDetails {
      * @param lastName
      * @param gender
      * @param age
+     * @param address
+     * @param phoneNumbers
      */
-    public UserDetails(String firstName, String lastName, String gender, Integer age) {
+    public UserDetails(String firstName, String lastName, String gender, Integer age, JsonObject address, JsonArray phoneNumbers) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
+        this.address = address;
+        this.phoneNumbers = phoneNumbers;
     }
 
     public String getFirstName() {
@@ -73,6 +85,22 @@ public class UserDetails {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public JsonObject getAddress() {
+        return address;
+    }
+
+    public void setAddress(JsonObject address) {
+        this.address = address;
+    }
+
+    public JsonArray getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public void setPhoneNumbers(JsonArray phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
     }
 
 }
