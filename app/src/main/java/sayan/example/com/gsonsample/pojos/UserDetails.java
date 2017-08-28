@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by Admin on 24-08-2017.
+ * The main POJO for outer JSON Object
  */
 
 public class UserDetails {
@@ -25,9 +26,11 @@ public class UserDetails {
     private Integer age;
     @SerializedName("address")
     @Expose
+    // keep it as JsonObject to use it for another POJO
     private JsonObject address;
     @SerializedName("phoneNumbers")
     @Expose
+    // keep it as JsonObject to use it for another POJO
     private JsonArray phoneNumbers = null;
 
     /**
